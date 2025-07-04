@@ -1,0 +1,42 @@
+#! /bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+~/.local/bin/autostart.sh &
+
+bspc monitor -d 1 2 3 4 5 6 7 8 9 0
+
+bspc config border_width         2
+bspc config window_gap          0
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# Window Rules
+
+# Browsers
+bspc rule -a firefox desktop='^2'
+bspc rule -a Chromium desktop='^2'
+
+# Terminal
+bspc rule -a Alacritty state=tiled
+bspc rule -a kitty state=tiled
+
+# Media
+bspc rule -a mpv desktop='^4' state=floating
+bspc rule -a Evince desktop='^4' state=tiled
+
+# Code/Tools
+bspc rule -a code desktop='^3'
+bspc rule -a Gitk desktop='^3'
+bspc rule -a Meld desktop='^3'
+
+# File Manager
+bspc rule -a Pcmanfm desktop='^3' state=tiled
+
+# Floating Utilities
+bspc rule -a Pavucontrol state=floating
+bspc rule -a qalculate-gtk state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
