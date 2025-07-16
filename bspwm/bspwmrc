@@ -24,7 +24,7 @@ bspc rule -a Alacritty state=tiled
 bspc rule -a kitty state=tiled
 
 # Media
-bspc rule -a mpv desktop='^4' state=floating
+bspc rule -a mpv desktop='^4' state=tiled
 bspc rule -a Evince desktop='^4' state=tiled
 
 # Code/Tools
