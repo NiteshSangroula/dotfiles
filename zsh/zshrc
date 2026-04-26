@@ -16,9 +16,9 @@ plugins=(
   git
   z
   sudo
-  colored-man-pages
   history-substring-search
-  command-not-found
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 # Load Oh My Zsh
@@ -73,9 +73,35 @@ ENABLE_CORRECTION="true"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+nvm() {
+  unset -f nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+  nvm "$@"
+}
+
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
 export PATH=$JAVA_HOME/bin:$PATH
 
+# Use ripgrep for fzf (super fast search)
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
+# CTRL+R with preview (history search)
+export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:wrap"
+
+# Better ls
+alias ls='eza --icons'
+alias ll='eza -lh --icons'
+alias la='eza -lah --icons'
+
+# Better cat
+alias cat='bat'
+
+# Better disk usage
+alias du='du -h'
+alias df='df -h'
+
+# Safer delete
+alias trash='trash-put'
