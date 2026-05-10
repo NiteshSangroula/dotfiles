@@ -1,0 +1,57 @@
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 13px;
+}
+
+window#waybar {
+  background: rgba(20, 20, 20, 0.85);
+  color: #ffffff;
+  border-radius: 10px;
+  margin: 6px;
+}
+
+/* Left / center / right spacing */
+#workspaces {
+  margin-left: 10px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #888;
+    border-radius: 6px;
+}
+
+#workspaces button.active {
+  background: rgba(255,255,255,0.15);
+  color: #ffffff;
+}
+
+#workspaces button:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+#clock {
+  padding: 0 10px;
+}
+
+/* Right side modules spacing */
+#pulseaudio,
+#network,
+#battery {
+  padding: 0 10px;
+}
+
+/* separators */
+#custom-sep1,
+#custom-sep2 {
+  color: #555;
+  padding: 0 5px;
+}
+
+/* Hover effect (optional but nice) */
+#pulseaudio:hover,
+#network:hover,
+#battery:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+}
