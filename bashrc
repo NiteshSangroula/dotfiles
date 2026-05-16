@@ -68,7 +68,7 @@ eval "$(zoxide init bash)"
 # TMUX SESSIONIZER
 # =========================================================
 
-bind -x '"\C-f": tmux-sessionizer.sh'
+bind -x '"\C-@": tmux-sessionizer.sh'
 
 alias tmuxdir='tmux new -s "$(basename "$PWD")"'
 
