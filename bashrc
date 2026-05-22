@@ -26,8 +26,8 @@ export LANG=en_US.UTF-8
 export EDITOR='nvim'
 
 # Java
-export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
-export PATH="$JAVA_HOME/bin:$PATH"
+#export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+#export PATH="$JAVA_HOME/bin:$PATH"
 
 # Custom paths
 export PATH="$HOME/.local/share/nvim/lsp_servers/lua_ls/bin:$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH"
