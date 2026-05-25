@@ -31,7 +31,7 @@ history = 10000
 multiplier = 3
 
 [window]
-opacity = 0.9
+opacity = 0.8
 dynamic_padding = true
 
 [window.class]

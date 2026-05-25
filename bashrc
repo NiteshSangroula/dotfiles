@@ -107,6 +107,12 @@ alias gp='git push'
 alias ga='git add'
 alias gc='git commit -m'
 
+# video recording
+# with audio using wf-recorder
+alias rec='wf-recorder -g "$(slurp)" -f ~/Videos/Screenrecordings$(date +%F_%H-%M-%S).mp4'
+
+alias reca='wf-recorder -g "$(slurp)" --audio=alsa_input.pci-0000_00_1f.3.analog-stereo -f ~/Videos/Screenrecordings$(date +%F_%H-%M-%S).mp4'
+
 # =========================================================
 # STARSHIP PROMPT
 # =========================================================
