@@ -82,9 +82,9 @@ alias ...='cd ../..'
 alias c='clear'
 
 # Better tools
-alias ls='eza --icons'
-alias ll='eza -lh --icons'
-alias la='eza -lah --icons'
+alias ls='eza --icons=always'
+alias ll='eza -lh --icons=always'
+alias la='eza -lah --icons=always'
 
 alias cat='bat'
 
