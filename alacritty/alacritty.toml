@@ -1,5 +1,36 @@
-[colors]
-draw_bold_text_with_bright_colors = true
+[colors.primary]
+background = "#222436"
+foreground = "#c8d3f5"
+
+[colors.cursor]
+text = "#222436"
+cursor = "#c8d3f5"
+
+[colors.selection]
+text = "#c8d3f5"
+background = "#2f334d"
+
+[colors.normal]
+black   = "#1b1d2b"
+red     = "#ff757f"
+green   = "#c3e88d"
+yellow  = "#ffc777"
+blue    = "#82aaff"
+magenta = "#c099ff"
+cyan    = "#86e2d5"
+white   = "#828bb8"
+
+[colors.bright]
+black   = "#444a73"
+red     = "#ff757f"
+green   = "#c3e88d"
+yellow  = "#ffc777"
+blue    = "#82aaff"
+magenta = "#c099ff"
+cyan    = "#86e2d5"
+white   = "#c8d3f5"
+
+
 
 [[keyboard.bindings]]
 action = "spawnNewInstance"
@@ -31,7 +62,7 @@ history = 10000
 multiplier = 3
 
 [window]
-opacity = 0.8
+opacity = 1
 dynamic_padding = true
 
 [window.class]
